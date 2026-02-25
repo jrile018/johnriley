@@ -141,7 +141,7 @@ export default function TerminalPanel({ activeTab, onNavigate, mode = "inline" }
       className={`overflow-hidden ${
         isInline
           ? "w-full max-w-2xl rounded-2xl border border-white/[0.06] bg-[#0c0c0c]/60 backdrop-blur-2xl shadow-[0_8px_40px_rgba(0,0,0,0.5),0_0_0_1px_rgba(255,255,255,0.02),inset_0_1px_0_rgba(255,255,255,0.03)]"
-          : "w-[380px] sm:w-[460px] rounded-2xl border border-white/[0.06] bg-[#0c0c0c]/90 backdrop-blur-2xl shadow-[0_16px_64px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.02)]"
+          : "w-[calc(100vw-2rem)] sm:w-[380px] md:w-[460px] max-w-[460px] rounded-2xl border border-white/[0.06] bg-[#0c0c0c]/90 backdrop-blur-2xl shadow-[0_16px_64px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.02)]"
       }`}
     >
       {/* Title bar */}

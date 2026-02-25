@@ -8,7 +8,7 @@ import type { TabId } from "@/data/portfolio";
 export default function Experience({ activeTab, onNavigate }: { activeTab: TabId; onNavigate: (tab: TabId) => void }) {
   return (
     <SectionWrapper id="experience" title="Experience" compact>
-      <div className="grid md:grid-cols-2 gap-3 h-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 h-full overflow-y-auto md:overflow-hidden">
         {experience.map((item, i) => (
           <motion.div
             key={item.company}

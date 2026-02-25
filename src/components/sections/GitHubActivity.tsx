@@ -122,13 +122,13 @@ export default function GitHubActivity({ activeTab, onNavigate }: { activeTab: T
     <SectionWrapper id="github" title="GitHub Activity" compact>
       <div className="flex flex-col h-full">
         {/* Top section: stats + contribution grid side by side */}
-        <div className="flex gap-4 mb-3">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-3">
           {/* Stats column */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="shrink-0 flex flex-col gap-2 w-36"
+            className="shrink-0 flex flex-row sm:flex-col gap-2 sm:w-36"
           >
             {loading ? (
               <div className="text-xs font-heading text-foreground/30">
@@ -166,7 +166,7 @@ export default function GitHubActivity({ activeTab, onNavigate }: { activeTab: T
           </motion.div>
 
           {/* Contribution grid + languages */}
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0 overflow-x-auto">
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}

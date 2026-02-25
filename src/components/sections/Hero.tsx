@@ -13,9 +13,9 @@ interface HeroProps {
 export default function Hero({ onNavigate }: HeroProps) {
   return (
     <section
-      className="h-full flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="h-full flex items-center justify-center px-2 sm:px-6 lg:px-8 overflow-hidden"
     >
-      <div className="max-w-3xl w-full text-center py-12">
+      <div className="max-w-3xl w-full text-center py-6 sm:py-12">
         <motion.h1
           initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}

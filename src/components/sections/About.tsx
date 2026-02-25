@@ -15,7 +15,7 @@ export default function About({ activeTab, onNavigate }: { activeTab: TabId; onN
   return (
     <SectionWrapper id="about" title="About Me" compact>
       {/* Top row: photo + bio + education + contact */}
-      <div className="flex gap-5 items-start mb-3">
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 items-center sm:items-start mb-3">
         {/* Headshot */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
@@ -25,7 +25,7 @@ export default function About({ activeTab, onNavigate }: { activeTab: TabId; onN
         >
           <motion.div
             whileHover={{ scale: 1.03, rotate: 1 }}
-            className="w-48 h-60 border border-border rounded-md bg-surface-light overflow-hidden glow-box-hover transition-all duration-300 relative"
+            className="w-32 h-40 sm:w-48 sm:h-60 border border-border rounded-md bg-surface-light overflow-hidden glow-box-hover transition-all duration-300 relative"
           >
             <img
               src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/headshot.png`}
@@ -46,11 +46,11 @@ export default function About({ activeTab, onNavigate }: { activeTab: TabId; onN
           transition={{ duration: 0.5, delay: 0.15 }}
           className="flex-1 min-w-0"
         >
-          <p className="text-foreground/65 leading-relaxed text-[12px] mb-2.5">
+          <p className="text-foreground/65 leading-relaxed text-[12px] sm:text-[12px] mb-2.5">
             {personal.bio}
           </p>
 
-          <div className="grid grid-cols-3 gap-x-4 gap-y-1 mb-2.5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-1 mb-2.5">
             {[
               personal.school,
               personal.degree,
@@ -75,7 +75,7 @@ export default function About({ activeTab, onNavigate }: { activeTab: TabId; onN
       </div>
 
       {/* Skills grid — 2x2 layout */}
-      <div className="grid grid-cols-2 gap-x-6 gap-y-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
         {skills.map((category, catIdx) => (
           <motion.div
             key={category.category}
@@ -118,7 +118,7 @@ export default function About({ activeTab, onNavigate }: { activeTab: TabId; onN
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.5 }}
-        className="mt-auto pt-3 border-t border-border/40 flex items-center gap-6"
+        className="mt-auto pt-3 border-t border-border/40 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6"
       >
         <span className="text-[11px] font-heading text-primary/50">$ contact</span>
         {contactLinks.map((link, i) => (
@@ -131,7 +131,7 @@ export default function About({ activeTab, onNavigate }: { activeTab: TabId; onN
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.55 + i * 0.06 }}
             whileHover={{ x: 3 }}
-            className="flex items-center gap-2 text-[13px] font-heading text-foreground/50 hover:text-primary transition-colors"
+            className="flex items-center gap-2 text-[12px] sm:text-[13px] font-heading text-foreground/50 hover:text-primary transition-colors"
           >
             <span className="text-primary/60">{link.icon}</span>
             {link.label}
