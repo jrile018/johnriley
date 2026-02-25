@@ -101,6 +101,15 @@ export interface Experience {
 
 export const experience: Experience[] = [
   {
+    role: "Software Engineering Intern",
+    company: "Walmart",
+    period: "Jun 2026 — Aug 2026",
+    description: [
+      "Pending",
+    ],
+    current: false,
+  },
+  {
     role: "Quantitative Developer",
     company: "AlgoGators",
     period: "Sept 2025 — Present",
