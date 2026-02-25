@@ -46,7 +46,7 @@ export default function About({ activeTab, onNavigate }: { activeTab: TabId; onN
           transition={{ duration: 0.5, delay: 0.15 }}
           className="flex-1 min-w-0"
         >
-          <p className="text-foreground/65 leading-relaxed text-[12px] sm:text-[12px] mb-2.5">
+          <p className="text-foreground/65 leading-relaxed text-[13px] sm:text-[12px] mb-2.5">
             {personal.bio}
           </p>
 

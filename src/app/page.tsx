@@ -87,8 +87,8 @@ case "github":
     <>
       <LoadingScreen />
       <MatrixRain />
-      <div className="relative z-10 h-screen overflow-hidden flex flex-col">
-        <main className="flex-1 overflow-hidden">
+      <div className="relative z-10 min-h-screen sm:h-screen sm:overflow-hidden flex flex-col">
+        <main className="flex-1 overflow-y-auto sm:overflow-hidden">
           {renderTab()}
         </main>
       </div>
